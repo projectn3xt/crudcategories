@@ -1,2 +1,5 @@
-# crudcategories
-Crud de categorias usando o mezzio (zend) e angular 9
+# Deselvimento de um crud de categorias
+
+Backend desenvolvido em mezzio
+
+fronted desenvolvido em angukar 9
