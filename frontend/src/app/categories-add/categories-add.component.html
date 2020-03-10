@@ -1,0 +1,26 @@
+<div class="modal-header">
+  <h4 class="modal-title" *ngIf="id; else elseBlock">Alterar {{category}}</h4>
+  <ng-template #elseBlock><h4 class="modal-title">Adicionar nova categoria</h4></ng-template>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="modal-body">
+    <div class="container">
+      <div class="form-group">
+        <label for="category">Catergoria</label>
+        <input type="text" class="form-control" formControlName="category" [(ngModel)]="category"/>
+      </div>
+      <div class="form-group">
+        <label for="description">Descrição</label>
+        <textarea class="form-control" formControlName="description" [(ngModel)]="description"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success" [disabled]="!myForm.valid">
+      Salvar
+    </button>
+  </div>
+</form>

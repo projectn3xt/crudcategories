@@ -1,0 +1,42 @@
+<div class="dashboard">
+  <div>
+    <h1>Listagem de categorias</h1>
+  </div>
+  <div *ngIf="responseCategories">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categoria</th>
+          <th>Descrição</th>
+          <th>Visualizar</th>
+          <th>Editar</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of responseCategories._embedded.category">
+          <td>{{item.id}}</td>
+          <td>{{item.category}}</td>
+          <td>{{item.description}}</td>
+          <td style="text-align: center;cursor: pointer;" (click)="viewCategory(item.id)"><fa-icon [icon]="faEye"></fa-icon></td>
+          <td style="text-align: center;cursor: pointer;" (click)="editCategory(item)"><fa-icon [icon]="faEdit"></fa-icon></td>
+          <td style="text-align: center;cursor: pointer;" (click)="deleteCategory(item.id)"><fa-icon [icon]="faMinusCircle"></fa-icon></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6" class="text-right">
+            <button type="button" class="btn btn-outline-light btn-sm" (click)="addCategory()"> <fa-icon [icon]="faPlus"></fa-icon> Adicionar nova categoria</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <!--ngb-pagination
+      [collectionSize]=responseCategories._total_items
+      [pageSize]="5"
+      [(page)]=responseCategories._page
+    ></ngb-pagination-->
+  </div>
+
+</div>

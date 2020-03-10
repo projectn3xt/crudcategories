@@ -1,0 +1,182 @@
+{
+	"id": "2f6b31f4-1de1-44e4-973d-a60eb866ba5f",
+	"name": "egoi",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"38d25c4c-d2eb-48ff-b398-2871387aafb3"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "38d25c4c-d2eb-48ff-b398-2871387aafb3",
+			"name": "Categories",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "2f6b31f4-1de1-44e4-973d-a60eb866ba5f",
+			"folder": null,
+			"order": [
+				"7411d036-b3f4-4b98-8a06-93ed1f18cb93",
+				"a3066911-d014-43ad-b3e2-13067a12bb44",
+				"c7e72110-76b1-4404-98bf-e2e31b0e4e55",
+				"16ee1a70-ee35-459f-a59f-3537e15d5581",
+				"839963b4-e128-4c5c-9b97-8b54dd8a331c"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "16ee1a70-ee35-459f-a59f-3537e15d5581",
+			"name": "Update Category",
+			"url": "localhost:8080/api/category/1/",
+			"description": "Update category",
+			"data": [
+				{
+					"key": "description",
+					"value": "teste",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "38d25c4c-d2eb-48ff-b398-2871387aafb3",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "7411d036-b3f4-4b98-8a06-93ed1f18cb93",
+			"name": "List Categories",
+			"url": "localhost:8080/api/categories/",
+			"description": "Listt all categories",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "38d25c4c-d2eb-48ff-b398-2871387aafb3",
+			"pathVariables": {}
+		},
+		{
+			"id": "839963b4-e128-4c5c-9b97-8b54dd8a331c",
+			"name": "Find category by id",
+			"url": "localhost:8080/api/category/7/",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "38d25c4c-d2eb-48ff-b398-2871387aafb3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "a3066911-d014-43ad-b3e2-13067a12bb44",
+			"name": "Save Category",
+			"url": "localhost:8080/api/category/",
+			"description": "Save new category",
+			"data": [
+				{
+					"key": "category",
+					"value": "Perfumaria",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "Descrição da perfumaria",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "38d25c4c-d2eb-48ff-b398-2871387aafb3",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c7e72110-76b1-4404-98bf-e2e31b0e4e55",
+			"name": "Delete Category",
+			"url": "localhost:8080/api/category/7/",
+			"description": "Delete category",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "38d25c4c-d2eb-48ff-b398-2871387aafb3",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		}
+	]
+}
